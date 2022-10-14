@@ -1,0 +1,66 @@
+version: '3.9'
+
+services:
+  cassandra3352:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9042:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix1
+      - JVM_OPTS=-javaagent:/newrelic/v3.35.2/newrelic.jar
+  cassandra743:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9043:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix2
+      - JVM_OPTS=-javaagent:/newrelic/v7.4.3/newrelic.jar
+  cassandra7100:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9044:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix3
+      - JVM_OPTS=-javaagent:/newrelic/v7.10.0/newrelic.jar
+  cassandra3410:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9045:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix3
+      - JVM_OPTS=-javaagent:/newrelic/v3.41.0/newrelic.jar
+  cassandra3420:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9046:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix3
+      - JVM_OPTS=-javaagent:/newrelic/v3.42.0/newrelic.jar
+  cassandra3400:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9047:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix3
+      - JVM_OPTS=-javaagent:/newrelic/v3.40.0/newrelic.jar
+  cassandra3391:
+    image: arm64v8/cassandra:2.1.20
+    ports:
+      - "9048:9042"
+    volumes:
+      - ./newrelic:/newrelic
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix3
+      - JVM_OPTS=-javaagent:/newrelic/v3.39.1/newrelic.jar

@@ -1,0 +1,1 @@
+Provide each subdirectory with a newrelic.yml
