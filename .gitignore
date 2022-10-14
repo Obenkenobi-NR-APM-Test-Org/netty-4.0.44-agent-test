@@ -38,3 +38,6 @@ newrelic/*/logs/
 
 # gradle
 .gradle/
+
+# other
+.DS_STORE
